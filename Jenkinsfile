@@ -24,7 +24,8 @@ pipeline {
     
     stage('Local Deployment') {
       steps {
-        sh """ java -jar target/hello-demo-*.jar > /dev/null & """
+        // sh """ java -jar target/hello-demo-*.jar > /dev/null & """
+        sh """ java -jar target/hello-demo-*.jar > app.log 2>&1 & """
       }
     }
     
