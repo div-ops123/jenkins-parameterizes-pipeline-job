@@ -26,6 +26,7 @@ pipeline {
       steps {
         // sh """ java -jar target/hello-demo-*.jar > /dev/null & """
         sh """ java -jar target/hello-demo-*.jar > app.log 2>&1 & """
+        sh 'sleep 15'
       }
     }
     
